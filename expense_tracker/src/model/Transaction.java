@@ -5,31 +5,23 @@ import java.util.Date;
 import java.util.List;
 
 public class Transaction {
-
-  public double amount;
-  public String category;
-  public String timestamp;
+//Final is added to make the class members immutable
+  public final double amount;
+  public final String category;
+  public final String timestamp;
 
   public Transaction(double amount, String category) {
     this.amount = amount;
     this.category = category;
     this.timestamp = generateTimestamp();
   }
-
+//All the setters methods are removed to avoid further modification
   public double getAmount() {
     return amount;
   }
 
-  public void setAmount(double amount) {
-    this.amount = amount;
-  }
-
   public String getCategory() {
     return category;
-  }
-
-  public void setCategory(String category) {
-    this.category = category; 
   }
   
   public String getTimestamp() {
